@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gửi Cậu - Lời Yêu Thương</title>
+    <title>Gửi Em - Real Love ❤️</title>
     <style>
         body {
             margin: 0;
@@ -24,7 +24,7 @@
             border-radius: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            max-width: 400px;
+            max-width: 450px;
             width: 90%;
         }
         h1 {
@@ -37,6 +37,8 @@
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
+            text-align: left;
+            white-space: pre-line;
         }
         .btn {
             background: #fff;
@@ -62,20 +64,20 @@
 <body>
 
     <div class="container" id="welcome-screen">
-        <h1>Hi Cậu! 💌</h1>
-        <p>Tớ có một món quà nhỏ muốn gửi riêng cho cậu...</p>
+        <h1>Hi Em! 💌</h1>
+        <p style="text-align: center;">Anh có một điều bí mật muốn gửi đến em...</p>
         <button class="btn" onclick="openLetter()">Mở thư ra nha ✨</button>
     </div>
 
     <div class="container hidden" id="letter-screen">
-        <h1>Real Love ❤️</h1>
+        <h1>Anh yêu em &lt;3</h1>
         <p id="typed-text"></p>
         <button class="btn" onclick="location.reload()">Quay lại từ đầu</button>
     </div>
 
-    <!-- Nhạc nền Real Love (Dùng link stream nhạc trực tiếp) -->
+    <!-- Nhạc nền bài Real Love -->
     <audio id="bg-music" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://cdn.jsdelivr.net/gh/huythaidinh10-pixel/anh-yeu-em@main/real-love.mp3" type="audio/mpeg">
         Trình duyệt của bạn không hỗ trợ thẻ audio.
     </audio>
 
@@ -91,14 +93,14 @@
                 console.log("Trình duyệt chặn tự động phát nhạc:", error);
             });
 
-            // Hiệu ứng chữ chạy (Typing effect)
-            var text = "Cảm ơn cậu đã xuất hiện và mang lại ý nghĩa thực sự cho cuộc sống của tớ. Giống như giai điệu bài hát này, gặp được cậu chính là điều tuyệt vời nhất! ❤️";
+            // Nội dung thư của bạn
+            var text = "Anh yêu em <3 \nLần đầu tiên gặp em là anh đã thích em rồi, anh mong sau này sẽ được bên cạnh em nhiều hơn, yêu em nhiều hơn, chăm sóc quan tâm em nhiều hơn nữa, anh thích em rất rất là nhiều.! ❤️";
             var i = 0;
             function typeWriter() {
                 if (i < text.length) {
                     document.getElementById("typed-text").innerHTML += text.charAt(i);
                     i++;
-                    setTimeout(typeWriter, 50);
+                    setTimeout(typeWriter, 40);
                 }
             }
             typeWriter();
